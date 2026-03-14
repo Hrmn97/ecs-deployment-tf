@@ -10,10 +10,6 @@ jobs:
     name: Terraform Apply
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: terraform  # all `run:` steps execute inside the terraform/ folder
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
