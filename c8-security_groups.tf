@@ -5,12 +5,12 @@ resource "aws_security_group" "notification" {
   vpc_id      = var.vpc_id
 
   ingress {
-  from_port       = local.container_port           # 3000 only
-  to_port         = local.container_port           # 3000 only
-  protocol        = "tcp"
-  security_groups = [var.alb_security_group_id]    # ALB only, no IP ranges
-  description     = "Allow inbound from ALB only"
-}
+    from_port       = local.container_port # 3000 only
+    to_port         = local.container_port # 3000 only
+    protocol        = "tcp"
+    security_groups = [var.alb_security_group_id] # ALB only, no IP ranges
+    description     = "Allow inbound from ALB only"
+  }
 
   egress {
     from_port   = 443

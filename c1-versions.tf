@@ -16,6 +16,6 @@ terraform {
   backend "s3" {
     bucket = "terraform-stateless-prod"
     key    = "network/terraform.tfstate"
-    region = "us-east-2"
+    region = "us-west-2"
   }
 }
